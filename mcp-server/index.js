@@ -56,7 +56,7 @@ async function callWpAbility(abilityName, input = null, method = 'POST') {
   };
 
   if (options.method === 'POST' || options.method === 'PUT' || options.method === 'PATCH') {
-    headers['Content-Type'] = 'application/json';
+    options.headers['Content-Type'] = 'application/json';
     options.body = JSON.stringify({ input: input || {} });
   }
 
