@@ -1,0 +1,92 @@
+/**
+ * WPAgent GB Bridge - Estilos base y de compatibilidad para Gutenberg y GenerateBlocks
+ *
+ * @package WPAgent_GB_Bridge
+ */
+
+/* Contenedor genérico de secciones */
+.gb-container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+/* Sección Hero */
+.gb-hero-section {
+	padding: 48px 32px;
+	margin-bottom: 32px;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.02);
+	text-align: center;
+	box-sizing: border-box;
+}
+
+/* Espaciado de seguridad para evitar colisiones de inserción en el editor */
+.block-editor-block-list__block .gb-hero-section,
+.block-editor-block-list__block .gb-cta-box,
+.block-editor-block-list__block .gb-card-grid-section {
+	min-height: 80px;
+}
+
+/* Cuadrícula de tarjetas */
+.gb-card-grid-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 24px;
+	margin: 32px 0;
+	padding: 16px 0;
+	box-sizing: border-box;
+}
+
+.gb-card,
+.gb-card-item {
+	padding: 24px;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+	box-sizing: border-box;
+}
+
+/* Caja de Llamada a la Acción (CTA Box) */
+.gb-cta-box {
+	padding: 40px 32px;
+	margin: 36px 0;
+	border-radius: 8px;
+	background: #f8fafc;
+	border-left: 4px solid #2563eb;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.gb-cta-box .gb-cta-heading {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+/* Botones GenerateBlocks */
+.gb-button.gb-button-primary {
+	display: inline-block;
+	padding: 12px 28px;
+	background-color: #2563eb;
+	color: #ffffff !important;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 600;
+	margin-top: 16px;
+	transition: background-color 0.2s ease;
+}
+
+.gb-button.gb-button-primary:hover {
+	background-color: #1d4ed8;
+	color: #ffffff !important;
+}
+
+/* Aislamiento y estabilidad visual del appender de Gutenberg dentro de contenedores GB */
+.gb-element > .block-editor-button-block-appender,
+.gb-container > .block-editor-button-block-appender {
+	margin-top: 16px !important;
+	margin-bottom: 16px !important;
+	clear: both;
+}
